@@ -31,7 +31,7 @@
       <ul>
         <li>&copy; Movies!</li>
         <li>&#8213;</li>
-        <li>Written by <a href="mailto:jane.doe@example.com">Jane Doe</a></li>
+        <li>Written by <a href="mailto:kilian.halwachs@stud.hcw.ac.at">Kilian Halwachs</a></li>
         <li>&#8213;</li>
         <li>
           Visit us at
@@ -52,9 +52,14 @@
       </form>
     </dialog>
 
-    <!-- Task 2.1: Add a search dialog markup. Make sure the ids of the elements 
-     match the ones used in index.js. Your dialog needs a form and submit and cancel
-     buttons. -->
-    
+    <dialog id="searchDialog">
+      <form id="searchForm">
+        <label for="query">Search:</label>
+        <input type="text" id="query" name="query" required>
+        <button type="submit">Search</button>
+        <button type="button" id="cancelSearch">Cancel</button>
+      </form>
+      <div id="searchResults"></div>
+    </dialog>
   </body>
 </html>

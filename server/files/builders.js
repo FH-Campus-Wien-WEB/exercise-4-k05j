@@ -81,7 +81,7 @@ export class ParentChildBuilder extends ElementBuilder {
   }
 }
 
-class ParagraphBuilder extends ParentChildBuilder {
+export class ParagraphBuilder extends ParentChildBuilder {
   constructor() {
     super("p", "span");
   }

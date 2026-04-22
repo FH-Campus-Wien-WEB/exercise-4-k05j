@@ -79,6 +79,31 @@
       "Poster": "https://m.media-amazon.com/images/M/MV5BY2RiOTM0ZDgtNDRlMi00MDMzLWI1NDYtY2NjZDM4YTkwNWVlXkEyXkFqcGc@._V1_SX300.jpg",
       "Metascore": 67,
       "imdbRating": 6.9
+    },
+    "tt0116486": {
+      "Title": "Harald",
+      "Released": "02 Jan 1997",
+      "imdbID": "tt0116486",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMjE0MDAzNDAyOV5BMl5BanBnXkFtZTcwNTY3NjMyMQ@@._V1_SX300.jpg",
+      "Runtime": null,
+      "Genres": [
+        "Comedy",
+        "Sci-Fi"
+      ],
+      "Actors": [
+        "Heinrich Schafmeister",
+        "Martina Gedeck",
+        "Maximilian Wigger"
+      ],
+      "Directors": [
+        "Jürgen Egger"
+      ],
+      "Writers": [
+        "Jürgen Egger"
+      ],
+      "Plot": "Harald is an alien tourist who visits the earth on a three week package tour. As he bought the cheapest ticket, he only got a very ordinary guest body. Nevertheless he tries to learn as much as possible about human life and thus t...",
+      "Metascore": null,
+      "imdbRating": 7.1
     }
   },
   "jane": {
