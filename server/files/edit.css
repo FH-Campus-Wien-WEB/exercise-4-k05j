@@ -1,11 +1,124 @@
 @import url(base.css);
 
+.edit-layout {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.edit-poster {
+  flex-shrink: 0;
+  width: 260px;
+  position: sticky;
+  top: 20px;
+}
+
+.edit-poster img {
+  width: 100%;
+  border-radius: 16px;
+  border: 2px solid #3a3a5c;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.edit-fields {
+  flex: 1;
+  min-width: 0;
+}
+
+.field-row {
+  display: flex;
+  gap: 16px;
+}
+
+.field-row > div {
+  flex: 1;
+}
+
+label {
+  display: block;
+  margin-bottom: 4px;
+  color: #d4af37;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
 input,
 select,
 textarea {
   width: 100%;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #3a3a5c;
+  background-color: #16213e;
+  color: #e0e0e0;
+  font-family: inherit;
+  font-size: 0.95em;
+  box-sizing: border-box;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #d4af37;
+  box-shadow: 0 0 6px rgba(212, 175, 55, 0.3);
+}
+
+select[multiple] {
+  padding: 4px;
+}
+
+select option {
+  padding: 4px 8px;
+}
+
+select option:checked {
+  background-color: #d4af37;
+  color: #1a1a2e;
 }
 
 div {
-  margin: 4px 0px;
+  margin: 8px 0;
+}
+
+.button-group {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cancel-button {
+  background-color: #3a3a5c;
+  color: #e0e0e0;
+}
+
+.cancel-button:hover {
+  background-color: #4a4a7c;
+  box-shadow: none;
+}
+
+.save-button {
+  background-color: #d4af37;
+  color: #1a1a2e;
+}
+
+.save-button:hover {
+  background-color: #e6c54b;
+}
+
+@media screen and (max-width: 768px) {
+  .edit-layout {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .edit-poster {
+    position: static;
+    width: 200px;
+  }
+
+  .field-row {
+    flex-direction: column;
+    gap: 0;
+  }
 }

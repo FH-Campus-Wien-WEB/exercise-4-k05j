@@ -1,14 +1,8 @@
 @import url(layout.css);
 
-body {
-  background-image: url('images/background.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
 article {
-  background-color: rgba(211, 211, 211, 0.9);
+  background-color: #16213e;
+  border: 1px solid #3a3a5c;
   border-radius: 16px;
   padding: 16px;
   width: 384px;
@@ -36,9 +30,67 @@ span {
 }
 
 .genre {
-  padding: 4px 8px;
-  border: solid black 1px;
-  border-radius: 6px;
-  background-color: darkgray;
+  display: inline-block;
+  padding: 4px 10px;
+  border: 1px solid #3a3a5c;
+  border-radius: 12px;
+  background-color: #2a2a4a;
+  color: #d4af37;
   font-weight: bold;
+}
+
+.user-greeting {
+  color: #e0e0e0;
+}
+
+/* Dialogs (login / search) */
+dialog {
+  background-color: #16213e;
+  color: #e0e0e0;
+  border: 1px solid #3a3a5c;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+dialog form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 280px;
+}
+
+dialog label {
+  color: #d4af37;
+  font-weight: bold;
+  font-size: 0.9em;
+  margin-top: 4px;
+}
+
+dialog input {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #3a3a5c;
+  background-color: #1a1a2e;
+  color: #e0e0e0;
+  font-family: inherit;
+  font-size: 0.95em;
+}
+
+dialog input:focus {
+  outline: none;
+  border-color: #d4af37;
+  box-shadow: 0 0 6px rgba(212, 175, 55, 0.3);
+}
+
+dialog button {
+  margin-top: 6px;
+}
+
+#searchResults {
+  margin-top: 12px;
 }

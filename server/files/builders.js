@@ -118,7 +118,7 @@ export class MovieBuilder extends ElementBuilder {
         new ParagraphBuilder().items(
           "Runtime " + formatRuntime(movie.Runtime),
           "\u2022",
-          "Released on " + new Date(movie.Released).toLocaleDateString("en-US")
+          "Released on " + new Date(movie.Released).toLocaleDateString("de-DE")
         )
       )
       .append(new ParagraphBuilder().childClass("genre").items(movie.Genres))

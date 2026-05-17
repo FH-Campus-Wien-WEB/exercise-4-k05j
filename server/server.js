@@ -111,18 +111,19 @@ app.put("/movies/:imdbID", requireLogin, function (req, res) {
         if (data.Response === 'True') {
           const movieData = {
             Title: data.Title,
-            Released: data.Released ? data.Released.split('-')[0] : null,
             imdbID: data.imdbID,
-            Poster: data.Poster,
-            Runtime: isNaN(data.Runtime) ? null : parseInt(data.Runtime),
-            Released: data.Released,
-            Genres: data.Genre ? data.Genre.split(',').map(g => g.trim()) : [],
-            Actors: data.Actors ? data.Actors.split(',').map(a => a.trim()) : [],
-            Directors: data.Director ? data.Director.split(',').map(d => d.trim()) : [],
-            Writers: data.Writer ? data.Writer.split(',').map(w => w.trim()) : [],
+            Poster: data.Poster && data.Poster !== "N/A" ? data.Poster : null,
+            Runtime: data.Runtime && !isNaN(parseInt(data.Runtime)) ? parseInt(data.Runtime) : null,
+            Released: data.Released && data.Released !== "N/A" && !isNaN(new Date(data.Released).getTime())
+              ? new Date(data.Released).toISOString().split('T')[0]
+              : null,
+            Genres: data.Genre ? data.Genre.split(',').map(s => s.trim()) : [],
+            Actors: data.Actors ? data.Actors.split(',').map(s => s.trim()) : [],
+            Directors: data.Director ? data.Director.split(',').map(s => s.trim()) : [],
+            Writers: data.Writer ? data.Writer.split(',').map(s => s.trim()) : [],
             Plot: data.Plot,
-            Metascore: isNaN(data.Metascore) ? null : parseInt(data.Metascore),
-            imdbRating: isNaN(data.imdbRating) ? null : parseFloat(data.imdbRating)
+            Metascore: isNaN(parseInt(data.Metascore)) ? null : parseInt(data.Metascore),
+            imdbRating: isNaN(parseFloat(data.imdbRating)) ? null : parseFloat(data.imdbRating),
           };
           movieModel.setUserMovie(username, imdbID, movieData);
           res.sendStatus(201);

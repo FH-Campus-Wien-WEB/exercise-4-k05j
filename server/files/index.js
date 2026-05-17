@@ -144,7 +144,7 @@ function searchMovies(query) {
         new ElementBuilder("p").text(messages.noResultsFound).appendTo(resultsDiv);
       } else {
         results.forEach(movie => {
-          const element = new ParagraphBuilder().text(`${movie.Title} (${movie.Year})`).appendTo(resultsDiv);
+          const element = new ParagraphBuilder().with("id", movie.imdbID).text(`${movie.Title} (${movie.Year})`).appendTo(resultsDiv);
           const addButton = new ButtonBuilder("Add").onclick(() => addMovie(movie.imdbID)).appendTo(element);
         });
       }
